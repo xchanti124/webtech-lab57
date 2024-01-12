@@ -3,7 +3,471 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Anime Webpage</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
-    <body></body>
+    <body>
+        <div>
+            <h1>Anime Archive</h1>
+            <section>
+                <h2>Purpose of this website</h2>
+                <pre>
+Anime Archive is a website that is supposed to be an archive of <abbr>anime</abbr> (japanese animation series) where anyone can add their favorite anime and help expand the website.
+The anime can be added with a poster that depicts the anime, the release year, the genre that it is part of and a description of the plot of the anime.
+
+Eventually, this can become a space where everyone can come together and share their favorite anime with other people and describe the 
+anime in their own words for everyone else to see. If you want, you can check out some cool other websites that are great for learning
+more about anime!</pre
+                >
+                <nav id="links">
+                    <ul>
+                        <li>
+                            <a href="https://www.crunchyroll.com/"
+                                >Crunchyroll</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://myanimelist.net/">My Anime List</a>
+                        </li>
+                        <li><a href="https://aniwave.to/">Aniwave</a></li>
+                        <li>
+                            <a href="https://animemusicquiz.com/"
+                                >Anime Music Quiz</a
+                            >
+                        </li>
+                        <li><a href="#archive">Jump to archive!</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h2>Website navigation</h2>
+                    <pre>
+For easier and better navigation, there is a table of contents with the titles of the anime that 
+are contained in the archive, so if you want to jump to a specific anime from this list, you can click
+on the name and access all the information about it.</pre
+                    >
+                    <div class="indent">
+                        So far, our archive consists of the following anime:
+                    </div>
+                    <ol>
+                        <li><a href="#cowboy-bebop">Cowboy Bebop</a></li>
+                        <li><a href="#psycho-pass">Psycho Pass</a></li>
+                        <li><a href="#jujutsu-kaisen">Jujutsu Kaisen</a></li>
+                        <li><a href="#attack-on-titan">Attack on Titan</a></li>
+                        <li><a href="#monster">Monster</a></li>
+                    </ol>
+                </section>
+            </section>
+        </div>
+        <div>
+            <form
+                id="add-anime"
+                action="https://webtech.labs.vu.nl/api24/6bf6ff7c"
+                method="post"
+            >
+                <table id="archive">
+                    <caption>
+                        <strong>Archive</strong>
+                    </caption>
+                    <tr>
+                        <th>Name</th>
+                        <th>Poster</th>
+                        <th>Year</th>
+                        <th>Genre</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr id="cowboy-bebop">
+                        <td>
+                            <dl>
+                                <dt>Cowboy Bebop</dt>
+                                <dd>カウボーイビバップ</dd>
+                            </dl>
+                        </td>
+
+                        <td>
+                            <figure>
+                                <img
+                                    src="https://assets.mycast.io/posters/cowboy-bebop-live-action-film-fan-casting-poster-125797-medium.jpg?1630158179"
+                                    alt="Cowboy Bebop"
+                                />
+                                <figcaption>
+                                    <em>Cowboy Bebop</em>
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>1998</td>
+                        <td>
+                            <ul>
+                                <li>Anime</li>
+                                <li>Cyberpunk</li>
+                                <li>Action</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p>
+                                Japanese animated television series set in 2071
+                                and centered on the adventures of a gang of
+                                bounty hunters in space, the story delves into
+                                the unresolved issues of the protagonists' past,
+                                exploring concepts such as existentialism,
+                                boredom, loneliness, and the influence of the
+                                past.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr id="psycho-pass">
+                        <td>
+                            <dl>
+                                <dt>Psycho Pass</dt>
+                                <dd>サイコパス</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <figure>
+                                <img
+                                    src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/2e3d5e0f13da8c0eced54b573d883f0a.jpe"
+                                    alt="Psycho Pass Poster"
+                                />
+                                <figcaption>
+                                    <em>Psycho Pass</em>
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>2012</td>
+                        <td>
+                            <ul>
+                                <li>Thriller</li>
+                                <li>Anime</li>
+                                <li>Cyberpunk</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p>
+                                Psycho Pass is a psychological thriller anime
+                                that plays in an authoritarian future dystopia,
+                                where there is a system that can predict your
+                                likelihood of becoming a criminal and
+                                preventatively isolate you from society when
+                                your "psycho pass" (criminal likelihood score)
+                                is over a certain limit.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr id="jujutsu-kaisen">
+                        <td>
+                            <dl>
+                                <dt>Jujutsu Kaisen</dt>
+                                <dd>呪術廻戦</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <figure>
+                                <img
+                                    src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/ebcd65fa9fb83580062e7052fa6ee5a5.jpe"
+                                    alt="Jujutsu Kaisen Poster"
+                                />
+                                <figcaption>
+                                    <em>Jujutsu Kaisen</em>
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>2018</td>
+                        <td>
+                            <ul>
+                                <li>Anime</li>
+                                <li>Adventure Fiction</li>
+                                <li>Supernatural Fiction</li>
+                                <li>Shounen</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p>
+                                Jujutsu Kaisen is about a high school student
+                                Yuji Itadori who joins a school club during
+                                which he and his friends summon cursed creatures
+                                which ends up in Yuji's adventures and him
+                                fighting cursed creatures.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr id="attack-on-titan">
+                        <td>
+                            <dl>
+                                <dt>Attack on Titan</dt>
+                                <dd>進撃の巨人</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <figure>
+                                <img
+                                    src="https://static.wikia.nocookie.net/shingekinokyojin/images/d/d8/Attack_on_Titan_Season_1.jpg/revision/latest?cb=20211005182832"
+                                    alt="Attack on Titan"
+                                />
+                                <figcaption>
+                                    <em>Attack on Titan</em>
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>2013</td>
+                        <td>
+                            <ul>
+                                <li>Anime</li>
+                                <li>Action</li>
+                                <li>Adventure</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p>
+                                Attack on Titan is a Japanese manga series
+                                written and illustrated by Hajime Isayama. It is
+                                set in a world where humanity is forced to live
+                                in cities surrounded by three enormous walls
+                                that protect them from gigantic man-eating
+                                humanoids referred to as Titans; the story
+                                follows Eren Yeager, who vows to exterminate the
+                                Titans after they bring about the destruction of
+                                his hometown and the death of his mother.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr id="monster">
+                        <td>
+                            <dl>
+                                <dt>Monster</dt>
+                                <dd>モンスター</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <figure>
+                                <img
+                                    src="https://cdn.myanimelist.net/images/anime/10/18793.jpg"
+                                    alt="Monster"
+                                />
+                                <figcaption><em>Monster</em></figcaption>
+                            </figure>
+                        </td>
+                        <td>2004</td>
+                        <td>
+                            <ul>
+                                <li>Anime</li>
+                                <li>Crime</li>
+                                <li>Mistery</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p>
+                                Monster is a Japanese manga series written and
+                                illustrated by Naoki Urasawa. The story revolves
+                                around Kenzo Tenma, a Japanese surgeon living in
+                                Düsseldorf, Germany whose life enters turmoil
+                                after he gets himself involved with Johan
+                                Liebert, one of his former patients, who is
+                                revealed to be a psychopathic serial killer.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Name"></label>
+                            <input
+                                required
+                                type="text"
+                                id="Name"
+                                name="name"
+                                placeholder="Anime name"
+                            />
+                        </td>
+                        <td>
+                            <label for="Poster"></label>
+                            <input
+                                required
+                                type="text"
+                                id="Poster"
+                                name="poster"
+                                placeholder="Anime poster"
+                            />
+                        </td>
+                        <td>
+                            <label for="Year"></label>
+                            <input
+                                required
+                                type="text"
+                                id="Year"
+                                name="year"
+                                placeholder="Anime release year"
+                            />
+                        </td>
+                        <td>
+                            <label for="Genre"></label>
+                            <input
+                                required
+                                type="text"
+                                id="Genre"
+                                name="genre"
+                                placeholder="Anime genre"
+                            />
+                        </td>
+                        <td>
+                            <label for="Description"></label>
+                            <input
+                                required
+                                type="text"
+                                id="Description"
+                                name="description"
+                                placeholder="Anime description"
+                            />
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+        <div id="tablet-only">
+            <div class="archive-grid">
+                <div class="archive-image">
+                    <img
+                        src="https://assets.mycast.io/posters/cowboy-bebop-live-action-film-fan-casting-poster-125797-medium.jpg?1630158179"
+                        alt="Cowboy Bebop"
+                    />
+                </div>
+                <div class="archive-content">
+                    <p class="archive-year">1998</p>
+                    <dl class="archive-title">
+                        <dt>Cowboy Bebop</dt>
+                        <dd>カウボーイビバップ</dd>
+                    </dl>
+                    <ul class="archive-genre">
+                        <li>Anime</li>
+                        <li>Cyberpunk</li>
+                        <li>Action</li>
+                    </ul>
+                    <p class="archive-description">
+                        Japanese animated television series set in 2071 and
+                        centered on the adventures of a gang of bounty hunters
+                        in space, the story delves into the unresolved issues of
+                        the protagonists' past, exploring concepts such as
+                        existentialism, boredom, loneliness, and the influence
+                        of the past.
+                    </p>
+                </div>
+            </div>
+            <div class="archive-grid">
+                <div class="archive-image">
+                    <img
+                        src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/2e3d5e0f13da8c0eced54b573d883f0a.jpe"
+                        alt="Psycho Pass"
+                    />
+                </div>
+                <div class="archive-content">
+                    <p class="archive-year">2012</p>
+                    <dl class="archive-title">
+                        <dt>Psycho Pass</dt>
+                        <dd>サイコパス</dd>
+                    </dl>
+                    <ul class="archive-genre">
+                        <li>Thriller</li>
+                        <li>Anime</li>
+                        <li>Cyberpunk</li>
+                    </ul>
+
+                    <p class="archive-description">
+                        Psycho Pass is a psychological thriller anime that plays
+                        in an authoritarian future dystopia, where there is a
+                        system that can predict your likelihood of becoming a
+                        criminal and preventatively isolate you from society
+                        when your "psycho pass" (criminal likelihood score) is
+                        over a certain limit.
+                    </p>
+                </div>
+            </div>
+            <div class="archive-grid">
+                <div class="archive-image">
+                    <img
+                        src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/ebcd65fa9fb83580062e7052fa6ee5a5.jpe"
+                        alt="Jujutsu Kaisen Poster"
+                    />
+                </div>
+                <div class="archive-content">
+                    <p class="archive-year">2018</p>
+                    <dl class="archive-title">
+                        <dt>Jujutsu Kaisen</dt>
+                        <dd>呪術廻戦</dd>
+                    </dl>
+                    <ul class="archive-genre">
+                        <li>Anime</li>
+                        <li>Adventure Fiction</li>
+                        <li>Supernatural Fiction</li>
+                        <li>Shounen</li>
+                    </ul>
+
+                    <p class="archive-description">
+                        Jujutsu Kaisen is about a high school student Yuji
+                        Itadori who joins a school club during which he and his
+                        friends summon cursed creatures which ends up in Yuji's
+                        adventures and him fighting cursed creatures.
+                    </p>
+                </div>
+            </div>
+            <div class="archive-grid">
+                <div class="archive-image">
+                    <img
+                        src="https://static.wikia.nocookie.net/shingekinokyojin/images/d/d8/Attack_on_Titan_Season_1.jpg/revision/latest?cb=20211005182832"
+                        alt="Attack on Titan"
+                    />
+                </div>
+                <div class="archive-content">
+                    <p class="archive-year">2013</p>
+                    <dl class="archive-title">
+                        <dt>Attack on Titan</dt>
+                        <dd>進撃の巨人</dd>
+                    </dl>
+                    <ul class="archive-genre">
+                        <li>Anime</li>
+                        <li>Action</li>
+                        <li>Adventure</li>
+                    </ul>
+
+                    <p class="archive-description">
+                        Attack on Titan is a Japanese manga series written and
+                        illustrated by Hajime Isayama. It is set in a world
+                        where humanity is forced to live in cities surrounded by
+                        three enormous walls that protect them from gigantic
+                        man-eating humanoids referred to as Titans; the story
+                        follows Eren Yeager, who vows to exterminate the Titans
+                        after they bring about the destruction of his hometown
+                        and the death of his mother.
+                    </p>
+                </div>
+            </div>
+            <div class="archive-grid">
+                <div class="archive-image">
+                    <img
+                        src="https://cdn.myanimelist.net/images/anime/10/18793.jpg"
+                        alt="Monster"
+                    />
+                </div>
+                <div class="archive-content">
+                    <p class="archive-year">2004</p>
+                    <dl class="archive-title">
+                        <dt>Monster</dt>
+                        <dd>モンスター</dd>
+                    </dl>
+                    <ul class="archive-genre">
+                        <li>Anime</li>
+                        <li>Crime</li>
+                        <li>Mistery</li>
+                    </ul>
+
+                    <p class="archive-description">
+                        Monster is a Japanese manga series written and
+                        illustrated by Naoki Urasawa. The story revolves around
+                        Kenzo Tenma, a Japanese surgeon living in Düsseldorf,
+                        Germany whose life enters turmoil after he gets himself
+                        involved with Johan Liebert, one of his former patients,
+                        who is revealed to be a psychopathic serial killer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

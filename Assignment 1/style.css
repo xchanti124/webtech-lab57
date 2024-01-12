@@ -1,0 +1,243 @@
+/*
+Margins - margin-top, margin-bottom, margin-left, margin-right, margin (individual and shorthand notation)
+Background - background-color, background-image, background-repeat, background (individual and shorthand notation)
+Border - border-color, border-style, border-spacing, border-width, border (individual and shorthand notation)
+Text - text-align, text-decoration, text-indent, text-transform
+Foreground color - color
+Fonts - font-size (absolute/relative), font-weight, font-style, font-variant, font-family, font (individual and shorthand notation)
+Lists - list-style-type, list-style-position, list-style-image, list-style (individual and shorthand notation)
+Properties for paged media - page-break-before, page-break-after, orphans, widows
+Other - caption-side (in tables), float (e.g. for images), vertical-align
+Link pseudo-classes - :link :visited :hover, :active, :focus
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px 10px;
+}
+
+body,
+td {
+    font-family: sans-serif;
+    background: white no-repeat center;
+    font-weight: normal;
+    orphans: 0;
+    widows: 0;
+}
+
+h1 {
+    text-align: left;
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    padding: 100px;
+    color: black;
+    text-decoration: underline;
+    background-image: url("https://i.pinimg.com/originals/39/1b/38/391b3827325e6df46999ee83418fc36a.jpg");
+    background-repeat: no-repeat;
+    vertical-align: baseline;
+}
+
+pre {
+    white-space: pre-line;
+    font-family: sans-serif;
+}
+
+th {
+    font-size: 20px;
+    background-color: rgb(122, 122, 119);
+}
+
+table {
+    border-collapse: separate;
+    text-align: center;
+    margin-top: 40px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-spacing: 1px;
+    width: 100%;
+    margin: 10px 10px;
+    font: 16px sans-serif;
+    max-width: 1478px;
+}
+
+th,
+td {
+    border: 2px solid black;
+    border-spacing: 50px;
+}
+
+caption {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+table img {
+    width: 5em;
+    /* height: 200px; */
+    object-fit: cover;
+    float: none;
+}
+
+li {
+    text-align: left;
+}
+
+ul {
+    list-style-image: url("https://cdn-icons-png.flaticon.com/512/0/14.png");
+    list-style-image: inherit;
+    list-style-image: initial;
+    list-style-image: revert;
+    list-style-image: revert-layer;
+    list-style-image: unset;
+    margin-left: 20px;
+}
+
+ol {
+    list-style-position: inside;
+    list-style-type: decimal;
+}
+
+dl {
+    list-style: none inside none;
+}
+
+caption {
+    font-variant: common-ligatures;
+    font-style: bold;
+    caption-side: top;
+}
+
+figcaption {
+    font-variant: common-ligatures;
+    font-style: italic;
+}
+
+a:visited {
+    color: green;
+}
+a:active {
+    background-color: yellow;
+}
+
+.indent {
+    text-indent: 30px;
+}
+
+abbr {
+    font-style: italic;
+    color: chocolate;
+}
+
+/* FOR TABLET */
+@media screen and (max-width: 768px) {
+    #add-anime {
+        display: none;
+    }
+
+    #tablet-only {
+        display: block;
+    }
+
+    .archive-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .archive-image {
+        grid-area: 1 / 1 / 9 / 4;
+    }
+    .archive-content {
+        grid-area: 1 / 4 / 9 / 9;
+    }
+
+    .archive-image img {
+        width: 100%;
+    }
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 769px) {
+    #tablet-only {
+        display: none;
+    }
+}
+
+@media print {
+    #tablet-only {
+        display: block;
+    }
+    #add-anime {
+        display: none;
+    }
+}
+
+/* FOR MOBILE */
+@media only screen and (max-width: 480px) {
+    #tablet-only {
+        display: block;
+    }
+
+    .archive-grid {
+        display: block;
+    }
+
+    .archive-image {
+        text-align: center;
+    }
+    .archive-image img {
+        width: 60%;
+    }
+}
+
+#tablet-only {
+    padding-top: 15px;
+    page-break-before: always;
+}
+
+.archive-grid {
+    margin-bottom: 15px;
+    border: 0.7rem;
+    border-color: black;
+    border-radius: 0.3rem;
+    border-style: double;
+    page-break-after: always;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.archive-grid:hover {
+    transform: scale(1.02);
+}
+
+.archive-content {
+    padding-left: 10px;
+}
+
+.archive-year {
+    font-size: 1.2rem;
+}
+.archive-title {
+    margin-bottom: 10px;
+}
+
+.archive-title dd {
+    font-size: 1.3rem;
+}
+.archive-title dt {
+    font-size: 1.3rem;
+}
+
+.archive-genre {
+    margin-bottom: 10px;
+}
