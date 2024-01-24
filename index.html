@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anime Webpage</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <h1>Anime Archive</h1>
+            <section>
+                <h2>Purpose of this website</h2>
+                <p>
+                    Anime Archive is a website that is supposed to be an archive
+                    of <abbr>anime</abbr> (japanese animation series) where
+                    anyone can add their favorite anime and help expand the
+                    website. The anime can be added with a poster that depicts
+                    the anime, the release year, the genre that it is part of
+                    and a description of the plot of the anime. Eventually, this
+                    can become a space where everyone can come together and
+                    share their favorite anime with other people and describe
+                    the anime in their own words for everyone else to see. If
+                    you want, you can check out some cool other websites that
+                    are great for learning more about anime!
+                </p>
+                <nav id="links">
+                    <ul>
+                        <li>
+                            <a href="https://www.crunchyroll.com/"
+                                >Crunchyroll</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://myanimelist.net/">My Anime List</a>
+                        </li>
+                        <li><a href="https://aniwave.to/">Aniwave</a></li>
+                        <li>
+                            <a href="https://animemusicquiz.com/"
+                                >Anime Music Quiz</a
+                            >
+                        </li>
+                        <li><a href="#archive">Jump to archive!</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h2>Website filters</h2>
+                    <p>
+                        In order to make our gallery more easily navigable, we
+                        have a filterable gallery, which means that you can
+                        choose a year from the list of years below to filter
+                        for. That way you can easily jump to your desired media
+                        era easily and quickly!
+                    </p>
+                    <span id="filter-years"></span>
+                    <div class="filter-search-container">
+                        <input
+                            id="filter-search"
+                            type="text"
+                            placeholder="Enter a search query"
+                        />
+                        <button
+                            id="filter-search-apply"
+                            class="button button-primary"
+                        >
+                            Apply search
+                        </button>
+                    </div>
+                </section>
+                <section>
+                    <h2>Archive</h2>
+
+                    <div class="archive-container">
+                        <button
+                            class="button button-primary archive-button"
+                            id="reset-archive"
+                        >
+                            Reset archive
+                        </button>
+
+                        <button
+                            class="button button-primary archive-button"
+                            id="form-dialog-open"
+                        >
+                            Add anime
+                        </button>
+                    </div>
+                </section>
+            </section>
+        </div>
+
+        <div>
+            <table id="archive">
+                <thead>
+                    <tr>
+                        <!-- todo: remove inline styling -->
+                        <th class="name-column">Name</th>
+                        <th class="poster-column">Poster</th>
+                        <th class="year-column">Year</th>
+                        <th>Genre</th>
+                        <th class="description-column">Description</th>
+                    </tr>
+                </thead>
+
+                <tbody id="archive-table"></tbody>
+            </table>
+        </div>
+
+        <div id="tablet-only">
+            <div id="archive-grid"></div>
+        </div>
+
+        <dialog id="form-dialog">
+            <form
+                id="add-anime"
+                class="form"
+                action="https://webtech.labs.vu.nl/api24/6bf6ff7c"
+                method="post"
+            >
+                <label for="Name"></label>
+                <input
+                    required
+                    type="text"
+                    id="Name"
+                    name="name"
+                    placeholder="Name"
+                />
+                <label for="Poster"></label>
+                <input
+                    required
+                    type="text"
+                    id="Poster"
+                    name="poster"
+                    placeholder="Poster"
+                />
+                <label for="Year"></label>
+                <input
+                    required
+                    type="text"
+                    id="Year"
+                    name="year"
+                    placeholder="Release year"
+                />
+                <label for="Genre"></label>
+                <input
+                    required
+                    type="text"
+                    id="Genre"
+                    name="genre"
+                    placeholder="Genre"
+                />
+                <label for="Description"></label>
+                <textarea
+                    class="description"
+                    required
+                    type="text"
+                    id="Description"
+                    name="description"
+                    placeholder="Anime description"
+                ></textarea>
+                <div class="dialog-actions-container">
+                    <input
+                        id="form-dialog-submit"
+                        class="button button-primary"
+                        type="button"
+                        value="Submit"
+                    />
+                    <input
+                        id="form-dialog-close"
+                        class="button button-warn"
+                        type="button"
+                        value="Close"
+                    />
+                </div>
+            </form>
+        </dialog>
+    </body>
+</html>
