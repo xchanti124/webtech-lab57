@@ -13,3 +13,16 @@ How we addressed the following WCAG guidelines:
     -   We address this by not blocking or hiding any information relating to the webpage in any way, except when it is required (such as removing the form functionality from the print view of the webpage).
 -   2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.
     -   We address this by having titles for each section that is logically separate from the other. We also have a section specifically dedicated to the purpose and aim of the website with its appropriate title to make navigation more accessible. Moreover, whenever we do use links (whether the link is internal or external) we use appropriate and understandable naming as well as a different layout of the text so the link stands out and it is understandable that it is a link and what its purpose is.
+
+Addressing Peer Feedback:
+
+1. One point of complaint was the left-alignment since it would be uncomfortable on a big monitor. The suggestion was to have the page centered so it would appear in the center even on very large screens. We agree with this feedback and therefore implemented a center alignment style for the entire page.
+2. Another point for improvement was to use more classes as identifiers, which we did do more consistently as we created the dynamic content for the table and grid
+3. The banner was not compatible for smaller screen sizes which is why we decided to remove it completely so that it doesn't take away any of the experience if the user is using the website on a device with a smaller screen
+
+Sources Cited:
+
+-   for creating the disappearing form, we used the HTML tag "dialog" and used explanations and sample implementations from the following two sources:
+
+1. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+2. https://www.w3schools.com/tags/tag_dialog.asp

@@ -45,13 +45,24 @@
                     </ul>
                 </nav>
                 <section>
-                    <h2>Website filters</h2>
+                    <h2>Website filters & Search</h2>
                     <p>
                         In order to make our gallery more easily navigable, we
                         have a filterable gallery, which means that you can
                         choose a year from the list of years below to filter
-                        for. That way you can easily jump to your desired media
-                        era easily and quickly!
+                        for. If you selected a filter and would like to unselect
+                        it, you can either click on the filter again, or you can
+                        click on "All years" to get back to the full gallery.
+                        That way you can easily jump to your desired media era
+                        easily and quickly! <br />
+                        Moreover, if you want to filter for anything else other
+                        than the year, you can use the search bar. You can
+                        combine both ways of filtering as well, for example, if
+                        you look for a genre, you can select a year and see
+                        which entries there are with that genre from the
+                        selected year. For going back to normal, you can just
+                        remove everything from search and apply an empty filter
+                        to get back!
                     </p>
                     <span id="filter-years"></span>
                     <div class="filter-search-container">
@@ -94,7 +105,6 @@
             <table id="archive">
                 <thead>
                     <tr>
-                        <!-- todo: remove inline styling -->
                         <th class="name-column">Name</th>
                         <th class="poster-column">Poster</th>
                         <th class="year-column">Year</th>
@@ -161,16 +171,16 @@
                 ></textarea>
                 <div class="dialog-actions-container">
                     <input
-                        id="form-dialog-submit"
-                        class="button button-primary"
-                        type="button"
-                        value="Submit"
-                    />
-                    <input
                         id="form-dialog-close"
                         class="button button-warn"
                         type="button"
                         value="Close"
+                    />
+                    <input
+                        id="form-dialog-submit"
+                        class="button button-primary"
+                        type="button"
+                        value="Submit"
                     />
                 </div>
             </form>

@@ -7,11 +7,6 @@ const formDialogClose = document.getElementById("form-dialog-close");
 const filterSearchApply = document.getElementById("filter-search-apply");
 const archiveUrl = "https://webtech.labs.vu.nl/api24/6bf6ff7c";
 
-// Todo
-// Horizontal scrollbar
-// switch submit and close buttons for the form
-// turn years into checkboxes so that you can click multiple years at the same time
-
 // if editingId is null, the form will add
 // if editingId is an item id, the form will update
 let editingId = null;
@@ -262,9 +257,15 @@ const render = async () => {
 
     for (const year of animeYears) {
         if (year === yearFilter) {
-            const yearActivatedLink = document.createElement("span");
+            const yearActivatedLink = document.createElement("a");
+            yearActivatedLink.href = "#";
             yearActivatedLink.classList.add("filter-link");
+            yearActivatedLink.classList.add("filter-link-activated");
             yearActivatedLink.innerHTML = year ?? "All years";
+            yearActivatedLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                setYearFilter(null);
+            });
 
             filterYearsElement.appendChild(yearActivatedLink);
 
