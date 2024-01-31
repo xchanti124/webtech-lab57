@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome file</title>
+        <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    </head>
+
+    <body class="stackedit">
+        <div class="stackedit__html">
+            <h1 id="media-api">Media API</h1>
+            <p>This is a CRUD API to manage the media database.</p>
+            <h3 id="get-all-media">Get all media</h3>
+            <h4 id="uri">URI</h4>
+            <p><code>GET</code> -&gt; <code>/media</code></p>
+            <h4 id="response">Response</h4>
+            <p>
+                On success, the response is a list of all the media available in
+                the database. It is an array of objects, where each object
+                represents a single piece of media. It has the following data
+                shape:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  year<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  genre<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  poster<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  description<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 200 is returned on success.</p>
+            <p>
+                On error, the response is an object with a single field
+                <code>error</code>:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> error<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <h3 id="create-new-media">Create new media</h3>
+            <h4 id="uri-1">URI</h4>
+            <p><code>POST</code> -&gt; <code>/media</code></p>
+            <h4 id="request">Request</h4>
+            <p>
+                The request should be a valid JSON representing a new media. The
+                <code>Content-Type</code> of the request is expected to be
+                <code>application/json</code>. The body of the request should
+                follow the following shape:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  year<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  genre<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  poster<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  description<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+            <h4 id="response-1">Response</h4>
+            <p>On operation success, the ID of the newest entry is returned:</p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 200 is returned on success.</p>
+            <p>
+                On error, the response is an object with a single field
+                <code>error</code>:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> error<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>
+                A status code of 400 is returned when invalid JSON or invalid
+                arguments are provided.
+            </p>
+            <h3 id="read-media">Read media</h3>
+            <h4 id="uri-2">URI</h4>
+            <p><code>GET</code> -&gt; <code>/media/:id</code></p>
+            <h4 id="request-parameters">Request parameters</h4>
+            <ul>
+                <li><code>:id</code> - ID of the media to get</li>
+            </ul>
+            <h4 id="response-2">Response</h4>
+            <p>
+                On success, the response is an object representing a single
+                piece of media. It has the following data shape:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  year<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  genre<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  poster<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  description<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 200 is returned on success.</p>
+            <p>
+                On error, the response is an object with a single field
+                <code>error</code>:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> error<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 404 is returned when invalid ID is provided.</p>
+            <h3 id="update-media">Update media</h3>
+            <h4 id="uri-3">URI</h4>
+            <p><code>PUT</code> -&gt; <code>/media/:id</code></p>
+            <h4 id="request-parameters-1">Request parameters</h4>
+            <ul>
+                <li><code>:id</code> - ID of the media to update</li>
+            </ul>
+            <h4 id="request-body">Request body</h4>
+            <p>
+                The request body should provide fields that should be updated.
+                The accepted fields are: <code>name</code>, <code>year</code>,
+                <code>genre</code>, <code>poster</code>,
+                <code>description</code>. All are optional. When provided, each
+                field should be a string. The full data shape looks as follows:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span>
+  name<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  year<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  genre<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  poster<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  description<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+            <h4 id="response-3">Response</h4>
+            <p>
+                On operation success, a success message in the following shape
+                is returned:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 200 is returned on success.</p>
+            <p>
+                On error, the response is an object with a single field
+                <code>error</code>:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> error<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>
+                A status code of 400 is returned when invalid JSON or invalid
+                arguments are provided.<br />
+                A status code of 404 is returned when invalid ID is provided.
+            </p>
+            <h3 id="delete-media">Delete media</h3>
+            <h4 id="uri-4">URI</h4>
+            <p><code>DELETE</code> -&gt; <code>/media/:id</code></p>
+            <h4 id="request-parameters-2">Request parameters</h4>
+            <ul>
+                <li><code>:id</code> - ID of the media to delete</li>
+            </ul>
+            <h4 id="response-4">Response</h4>
+            <p>
+                On operation success, a success message in the following shape
+                is returned:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 200 is returned on success.</p>
+            <p>
+                On error, the response is an object with a single field
+                <code>error</code>:
+            </p>
+            <pre
+                class="language-ts"
+            ><code class="prism  language-ts"><span class="token punctuation">{</span> error<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+            <p>A status code of 404 is returned when invalid ID is provided.</p>
+        </div>
+    </body>
+</html>
