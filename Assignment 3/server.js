@@ -37,6 +37,11 @@ app.use((err, _, res, next) => {
     next();
 });
 
+app.get("/hello", (_, res) => {
+    const responseBody = { Hello: "World" };
+    res.json(responseBody);
+});
+
 app.get("/media", (_, res) => {
     db.all(`SELECT * FROM media`, (err, rows) => {
         res.set("Content-Type", "application/json");
